@@ -1,9 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -15,7 +10,7 @@ import BackToTop from "./components/BackToTop";
 
 const App = () => {
   return (
-    <Router basename={import.meta.env.BASE_URL}>
+    <Router>
       <div className="min-h-screen overflow-x-hidden text-neutral-300 antialiased selection:bg-cyan-300 selection:text-cyan-900 bg-neutral-950">
         <div className="relative mx-auto px-4 lg:px-20 min-h-screen">
           <Navbar />
@@ -35,7 +30,6 @@ const App = () => {
             />
             {/* Experiment Route */}
             <Route path="/experiment" element={<Experiment />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
           {/* back to top button */}
           <BackToTop />
