@@ -1,3 +1,5 @@
+# don't use anymore
+
 # online portfolio
 
 built with react, javascript, typescript, vite, tailwindcss, emailjs.
